@@ -1,0 +1,4 @@
+
+export class AppConstant {
+    public static BettingArray = [{"name":"KING","category":"SPADE","uniqCode":"1"},{"name":"QUEEN","category":"SPADE","uniqCode":"2"},{"name":"JOKER","category":"SPADE","uniqCode":"3"},{"name":"KING","category":"CLUB","uniqCode":"4"},{"name":"QUEEN","category":"CLUB","uniqCode":"5"},{"name":"JOKER","category":"CLUB","uniqCode":"6"},{"name":"KING","category":"HEART","uniqCode":"7"},{"name":"QUEEN","category":"HEART","uniqCode":"8"},{"name":"JOKER","category":"HEART","uniqCode":"9"},{"name":"QUEEN","category":"DIAMOND","uniqCode":"10"},{"name":"KING","category":"DIAMOND","uniqCode":"11"},{"name":"JOKER","category":"DIAMOND","uniqCode":"12"}]
+}

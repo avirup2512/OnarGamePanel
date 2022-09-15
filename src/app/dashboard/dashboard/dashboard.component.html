@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 px-0">
+            <app-game-info></app-game-info>
+        </div>
+        <div class="col-md-12">
+            <div class="header">
+                <h3 class="float-start">List of Counters</h3>
+                <div class="filter float-end">
+                    <div ngbDropdown class="d-inline-block">
+                        <button type="button" class="btn btn-outline-primary" id="dropdown1" ngbDropdownToggle>Filter here</button>
+                        <div ngbDropdownMenu aria-labelledby="dropdown1">
+                          <!-- items as buttons -->
+                          <button ngbDropdownItem>Most profit</button>
+                          <button ngbDropdownItem>Less profit</button>
+                          <!-- <button ngbDropdownItem [disabled]="true">Button (disabled, not focusable)</button>
+                          <button ngbDropdownItem [class.disabled]="true" aria-disabled="true">Button (disabled, focusable)</button> -->
+                      
+                          <!-- items as links -->
+                          <!-- <a href="#" ngbDropdownItem>Link (enabled)</a>
+                          <a href="#" ngbDropdownItem [disabled]="true">Link (disabled, not focusable)</a>
+                          <a href="#" ngbDropdownItem [class.disabled]="true" aria-disabled="true">Link (disabled, focusable)</a> -->
+                        </div>
+                      </div>
+                </div>
+                <div class="clearfix"></div>
+                <hr>                
+            </div>
+            <div class="row d-none d-xs-none d-sm-none d-md-flex">
+                <div class="col-md-1 col-sm-1 col-1">
+                    <p><b>Number</b></p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-4">
+                    <p><b>Counter name</b></p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-2">
+                    <p><b>Balance</b></p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-2">
+                    <p><b>Total Bid</b></p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-2">
+                    <p><b>Total profit</b></p>
+                </div>
+                <div class="col-md-3 col-sm-3 col-2">
+                    <p class="float-end"><b>Action</b></p>
+                </div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item info" [ngClass]="{'list-group-item-warning':counter.askingbalance == true}" *ngFor="let counter of counters">
+                    <app-counter [counter]="counter" (addBalance)="addMinusBalance()" [uniqkey]="counter.uniqkey" [counternumber]="counter.number"></app-counter>
+                </li>                
+              </ul>           
+        </div>
+    </div>
+</div>
+
+

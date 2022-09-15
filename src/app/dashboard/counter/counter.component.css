@@ -1,0 +1,13 @@
+.counterListText {
+    vertical-align: sub;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: bolder;
+}
+
+@media (max-width: 767px) { 
+    
+    .counterListText {
+        font-size:19px
+    }
+ }

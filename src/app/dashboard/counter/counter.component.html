@@ -1,0 +1,26 @@
+    <div class="row">
+        <div class="col-md-1 col-sm-1 col-1">
+            <p class="counterListText badge bg-warning text-dark">{{counter_?.number}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12 col-12">
+            <p class="counterListText">{{counter_?.name}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12 col-12">
+            <p class="counterListText"><span class="d-xs-inline-block d-sm-inline-block d-sm-inline-block d-md-none d-lg-none dxl-none dxxl-none me-1"><b>Balance</b></span><span [ngClass]="{'text-success': counter_?.balance > 0,'text-danger':counter_?.balance <= 0}" class="text-primary">{{counter_?.balance ? counter_?.balance: 0}}</span></p>
+        </div>
+        <div class="col-md-2 col-sm-12 col-12">
+            <p class="counterListText"><span class="d-xs-inline-block d-sm-inline-block d-sm-inline-block d-md-none d-lg-none dxl-none dxxl-none me-1"><b>Total bet</b></span><span class="text-primary">{{counter_?.totalBet}}</span></p>
+        </div>
+        <div class="col-md-2 col-sm-12 col-12">
+            <p class="counterListText"><span class="d-xs-inline-block d-sm-inline-block d-sm-inline-block d-md-none d-lg-none dxl-none dxxl-none me-1"><b>Profit</b></span><span [ngClass]="{'text-success': counter_?.profit > 0,'text-danger':counter_?.profit <= 0}" class="text-primary">{{counter_?.profit}}</span></p>
+        </div>       
+        <div class="col-md-3 col-sm-12 col-12"> 
+            <div class="float-end">           
+                <button class="btn btn-primary btn-sm btn-danger" (click)="openBalanceModal()">Balance</button>
+            </div>
+            <div class="float-end">           
+                <button class="btn btn-primary btn-sm btn-success mx-2" (click)="openDetails(counter_?.number)">Details</button>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,21 @@
+<div class="jumbotron jumbotron-fluid mb-2">
+    <div class="container px-2">
+      <h3 class="display-4 float-start">
+        <!-- {{time}} -->
+        {{gameStateText}}
+      </h3>
+      
+      <h3 class="display-4 float-end">        
+        <span>
+            <span>
+              <b *ngIf="(winNumber == 1 || winNumber == 2 || winNumber == 7 || winNumber == 11)"> K</b>
+              <b *ngIf="(winNumber == 2 || winNumber == 5 || winNumber == 8 || winNumber == 10)"> Q</b>
+              <b *ngIf="(winNumber == 3 || winNumber == 6 || winNumber == 9 || winNumber == 12)"> J</b>            
+            </span> 
+        </span>
+        <span class="mx-2 align-baseline" *ngIf="winningCombination?.category" >
+          <img style="width:40px" src="/assets/image/{{winningCombination?.category}}.png"></span>
+      </h3>
+      <div class="clearfix"></div>      
+    </div>
+  </div>
